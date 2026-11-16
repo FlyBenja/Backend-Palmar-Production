@@ -1,0 +1,23 @@
+BACKEND PALMAR - DEPLOY EN WEBMIN
+
+1. Crear /var/www/hotel-palmar/backend
+2. Subir este ZIP a esa carpeta y extraerlo alli.
+3. Abrir Terminal en Webmin.
+4. Ejecutar:
+
+   cd /var/www/hotel-palmar/backend
+   npm install
+   npm run db:init
+   npm start
+
+5. Probar desde el servidor:
+
+   curl http://localhost:3000/
+
+Respuesta esperada:
+   {"message":"API Sistema Palmar funcionando","database":"MariaDB"}
+
+NOTA:
+- node_modules NO viene incluido; npm install debe ejecutarse en Ubuntu.
+- package-lock.json NO viene incluido porque el original correspondia a PostgreSQL/Neon.
+- El archivo .env ya esta configurado para la base MariaDB local entregada para este servidor.
